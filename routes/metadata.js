@@ -35,7 +35,7 @@ router.get("/", async (req, res) => {
 	}
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/:id.json", async (req, res) => {
 	const id = req.params.id;
 	const exists = await cache.get(
 		`Token_${id}`,
